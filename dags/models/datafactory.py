@@ -17,8 +17,8 @@ from services.db_service import engine, Session
 if not engine.dialect.has_schema(engine, "datafactory"):
     engine.execute(schema.CreateSchema("datafactory"))
 
-conn = engine.connect()
-conn.execute("CREATE EXTENSION postgis")    
+#conn = engine.connect()
+#conn.execute("CREATE EXTENSION postgis")    
     
 Base = declarative_base()
 
