@@ -209,6 +209,7 @@ class FBMProvider:
             "cropYear": UnPackObj().extract_obj(temporal_dimension).get('YEAR',None),
             "inputGeometry": json.loads(geometry['geom'])
         })
+        print(payload)
         # get the fbm api response
         api_response = self.send_api_request(payload)
         standardize_response = self.convert_response(api_response, temporal_dimension, spatial_dimension,product_dimension,dataset_list)
